@@ -7,7 +7,7 @@ servers:
 paths:
   /Proposal/SaveProposal:
     post:
-      summary: Create New User
+      summary: Criar nova proposta
       operationId: post-user
       responses:
         '200':
