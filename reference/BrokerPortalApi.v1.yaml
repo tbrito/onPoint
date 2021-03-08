@@ -87,11 +87,10 @@ components:
           type: boolean
           description: Set to true if the user's email has been verified.
         CoBroker:
-          type: object
+          $ref: '#/components/schemas/Cobroker'
       required:
         - ProposalTypeId
         - CompanyId
-        - ComplementaryModalityId
         - ComplementaryModalityId
         - HasCoBroker
     Cobroker:
