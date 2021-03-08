@@ -34,29 +34,8 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                firstName:
-                  type: string
-                lastName:
-                  type: string
-                email:
-                  type: string
-                dateOfBirth:
-                  type: string
-                  format: date
-              required:
-                - firstName
-                - lastName
-                - email
-                - dateOfBirth
-            examples:
-              Create User Bob Fellow:
-                value:
-                  firstName: Bob
-                  lastName: Fellow
-                  email: bob.fellow@gmail.com
-                  dateOfBirth: '1996-08-24'
+              $ref: '#/components/schemas/Proposal'
+            examples: {}
           application/xml:
             schema:
               $ref: '#/components/schemas/Proposal'
@@ -86,8 +65,10 @@ components:
         HasCoBroker:
           type: boolean
           description: Set to true if the user's email has been verified.
-        CoBroker:
-          $ref: '#/components/schemas/Cobroker'
+        coBroker:
+          type: array
+          items:
+            $ref: '#/components/schemas/Cobroker'
       required:
         - ProposalTypeId
         - CompanyId
