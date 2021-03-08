@@ -78,7 +78,7 @@ components:
           type: integer
         personId:
           type: string
-        amout:
+        amoutValue:
           type: number
         rate:
           type: number
