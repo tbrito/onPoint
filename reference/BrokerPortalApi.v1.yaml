@@ -11,7 +11,7 @@ paths:
       operationId: post-user
       responses:
         '200':
-          description: User Created
+          description: Proposal Created
           content:
             application/json:
               schema:
@@ -57,8 +57,11 @@ paths:
                   lastName: Fellow
                   email: bob.fellow@gmail.com
                   dateOfBirth: '1996-08-24'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Proposal'
         description: Post the necessary fields for the API to create a new user.
-      description: Create a new user.
+      description: ''
     parameters: []
 components:
   schemas:
