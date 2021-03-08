@@ -62,9 +62,6 @@ components:
           type: number
           format: date
           example: '1997-10-31'
-        HasCoBroker:
-          type: boolean
-          description: Set to true if the user's email has been verified.
         coBroker:
           type: array
           items:
@@ -73,7 +70,6 @@ components:
         - ProposalTypeId
         - CompanyId
         - ComplementaryModalityId
-        - HasCoBroker
     Cobroker:
       title: Cobroker
       type: object
